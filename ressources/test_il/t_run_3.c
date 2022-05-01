@@ -6,11 +6,11 @@
 /*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 02:09:25 by ilyes             #+#    #+#             */
-/*   Updated: 2022/04/23 00:51:35 by ilyes            ###   ########.fr       */
+/*   Updated: 2022/05/01 22:46:40 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 #include "test_il.h"
 
 void	run_memchr_test(char *s, char *c_c, char *n_c)
@@ -18,6 +18,7 @@ void	run_memchr_test(char *s, char *c_c, char *n_c)
 	int		c;
 	size_t	n;
 
+	printf("Code à check\n");
 	c = c_c[0];
 	n = (size_t)atoi(n_c);
 	if (memchr(s, c, n) == ft_memchr(s, c, n))
@@ -105,6 +106,7 @@ void	run_substr_test(char *s, char *start_c, char *len_c)
 	size_t			len;
 	char			*result;
 
+	printf("Code à check\n");
 	start = atoi(start_c);
 	len = (size_t)atoi(len_c);
 	result = ft_substr(s, start, len);
@@ -118,6 +120,7 @@ void	run_memcpy_test(char *dest, char *src, char *n_c)
 	char	*dest1;
 	char	*dest2;
 
+	printf("Code à check\n");
 	dest1 = malloc((strlen(dest) + 1) * sizeof(char));
 	dest2 = malloc((strlen(dest) + 1) * sizeof(char));
 	dest1 = strcpy(dest1, dest);
@@ -134,6 +137,29 @@ void	run_memcpy_test(char *dest, char *src, char *n_c)
 	free(dest2);
 }
 
+void	run_memmove_test(char *dest, char *src, char *n_c)
+{
+	size_t	n;
+	char	*dest1;
+	char	*dest2;
+
+	printf("Code à check\n");
+	dest1 = malloc((strlen(dest) + 1) * sizeof(char));
+	dest2 = malloc((strlen(dest) + 1) * sizeof(char));
+	dest1 = strcpy(dest1, dest);
+	dest2 = strcpy(dest2, dest);
+	n = (size_t)atoi(n_c);
+	memmove(dest1, src, n);
+	ft_memmove(dest2, src, n);
+	if (*dest1 == *dest2)
+		printf("Gg wp\n");
+	else
+		printf("Fail\n");
+	printf("Base = %s\nFt = %s\n", dest1, dest2);
+	free(dest1);
+	free(dest2);
+}
+
 void	run_memset_test(char *s, char *c_c, char *n_c)
 {
 	size_t	n;
@@ -141,6 +167,7 @@ void	run_memset_test(char *s, char *c_c, char *n_c)
 	char	*s2;
 	char	c;
 
+	printf("Code à check\n");
 	c = c_c[0];
 	s1 = ft_strdup(s);
 	s2 = ft_strdup(s);
@@ -154,4 +181,17 @@ void	run_memset_test(char *s, char *c_c, char *n_c)
 	printf("Base = %s\nFt = %s\n", s1, s2);
 	free(s1);
 	free(s2);
+}
+
+void	run_strncmp_test(char *s1, char *s2, char *n_c)
+{
+	size_t	n;
+
+	n = (size_t)atoi(n_c);
+	if (strncmp(s1, s2, n) == ft_strncmp(s1, s2, n))
+		printf("Gg wp\n");
+	else
+		printf("Fail\n");
+	printf("Base = %d\n", strncmp(s1, s2, n));
+	printf("Ft = %d\n", ft_strncmp(s1, s2, n));
 }

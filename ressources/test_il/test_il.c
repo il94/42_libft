@@ -6,11 +6,11 @@
 /*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:41:52 by ilyes             #+#    #+#             */
-/*   Updated: 2022/04/23 00:51:05 by ilyes            ###   ########.fr       */
+/*   Updated: 2022/05/01 22:56:48 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 #include "test_il.h"
 
 int	main(int ac, char **av)
@@ -41,6 +41,8 @@ int	main(int ac, char **av)
 			run_memcpy_test(av[2], av[3], av[4]);
 		else if (function == MEMCMP)
 			run_memcmp_test(av[2], av[3], av[4]);
+		else if (function == MEMMOVE)
+			run_memmove_test(av[2], av[3], av[4]);
 		else if (function == MEMSET)
 			run_memset_test(av[2], av[3], av[4]);
 		else if (function == PUTCHAR_FD)
@@ -55,6 +57,8 @@ int	main(int ac, char **av)
 			run_split_test(av[2], av[3]);
 		else if (function == STRCHR)
 			run_strchr_test(av[2], av[3]);
+		else if (function == STRDUP)
+			run_strdup_test(av[2]);
 		else if (function == STRITERI)
 			run_striteri_test(av[2]);
 		else if (function == STRLCAT)
@@ -63,12 +67,20 @@ int	main(int ac, char **av)
 			run_strlcpy_test(av[2], av[3], av[4]);
 		else if (function == STRMAPI)
 			run_strmapi_test(av[2]);
+		else if (function == STRNCMP)
+			run_strncmp_test(av[2], av[3], av[4]);
 		else if (function == STRNSTR)
 			run_strnstr_test(av[2], av[3], av[4]);
 		else if (function == STRRCHR)
 			run_strrchr_test(av[2], av[3]);
 		else if (function == SUBSTR)
 			run_substr_test(av[2], av[3], av[4]);
+		else if (function == STRLEN)
+			run_strlen_test(av[2]);
+		else if (function == TOLOWER)
+			run_tolower_test(av[2]);
+		else if (function == TOUPPER)
+			run_toupper_test(av[2]);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 01:09:09 by ilyes             #+#    #+#             */
-/*   Updated: 2022/04/20 23:29:14 by ilyes            ###   ########.fr       */
+/*   Updated: 2022/05/01 22:58:55 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <bsd/string.h>
 # include <unistd.h>
+# include <ctype.h>
 
 typedef enum e_func	t_func;
 enum e_func
@@ -71,7 +72,7 @@ void	run_itoa_test(char *n_c);
 void	run_memchr_test(char *s, char *c_c, char *n_c);
 void	run_memcpy_test(char *dest, char *src, char *n_c);
 void	run_memcmp_test(char *s1, char *s2, char *n_c);
-
+void	run_memmove_test(char *dest, char *src, char *n_c);
 void	run_memset_test(char *s, char *c, char *n_c);
 void	run_putchar_fd_test(char *c_c, char *fd_c);
 void	run_putendl_fd_test(char *s, char *fd_c);
@@ -79,18 +80,20 @@ void	run_putnbr_fd_test(char *n_c, char *fd_c);
 void	run_putstr_fd_test(char *s, char *fd_c);
 void	run_split_test(char *s, char *c);
 void	run_strchr_test(char *s, char *c_c);
-
+void	run_strdup_test(char *s);
 void	run_striteri_test(char *s);
 
 void	run_strlcat_test(char *dst_c, char *src, char *size_c);
 void	run_strlcpy_test(char *dst_c, char *src, char *n_c);
-
+void	run_strlen_test(char *s);
 void	run_strmapi_test(char *s);
-
+void	run_strncmp_test(char *s1, char *s2, char *n_c);
 void	run_strnstr_test(char *big, char *little, char *len_c);
 void	run_strrchr_test(char *s, char *c_c);
 
 void	run_substr_test(char *s, char *start, char *len_c);
 
+void	run_tolower_test(char *c);
+void	run_toupper_test(char *c);
 
 #endif

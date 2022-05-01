@@ -6,11 +6,11 @@
 /*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 02:16:26 by ilyes             #+#    #+#             */
-/*   Updated: 2022/04/20 23:31:39 by ilyes            ###   ########.fr       */
+/*   Updated: 2022/05/01 22:23:21 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 #include "test_il.h"
 
 void	run_strchr_test(char *s, char *c_c)
@@ -42,6 +42,7 @@ void	run_split_test(char *s, char *c)
 	int		i;
 	char	**result;
 
+	printf("Code à check\n");
 	result = ft_split(s, c[0]);
 	i = -1;
 	while (result[++i])
@@ -57,6 +58,7 @@ void	run_strmapi_test(char *s)
 	char	(*f)(unsigned int, char);
 	char	*result;
 
+	printf("Code à check\n");
 	f = &add_i;
 	result = ft_strmapi(s, f);
 	printf("Ft_strmapi = %s && s = %s\n", result, s);
@@ -68,6 +70,7 @@ void	run_striteri_test(char *s)
 	void	(*f)(unsigned int, char *);
 	char	*result;
 
+	printf("Code à check\n");
 	f = &deduct_i;
 	result = malloc((strlen(s) + 1) * sizeof(char));
 	result = strcpy(result, s);
@@ -101,6 +104,7 @@ void	run_putnbr_fd_test(char *n_c, char *fd_c)
 	int	n;
 	int	fd;
 
+	printf("Code à check\n");
 	n = atoi(n_c);
 	if (fd_c[0] == '1' && fd_c[1] == '\0')
 		fd = 1;
@@ -115,6 +119,7 @@ void	run_putendl_fd_test(char *s, char *fd_c)
 {
 	int	fd;
 
+	printf("Code à check\n");
 	if (fd_c[0] == '1' && fd_c[1] == '\0')
 		fd = 1;
 	else
@@ -129,6 +134,7 @@ void	run_putchar_fd_test(char *c_c, char *fd_c)
 	char	c;
 	int		fd;
 
+	printf("Code à check\n");
 	c = c_c[0];
 	if (fd_c[0] == '1' && fd_c[1] == '\0')
 		fd = 1;
@@ -143,6 +149,7 @@ void	run_putstr_fd_test(char *s, char *fd_c)
 {
 	int	fd;
 
+	printf("Code à check\n");
 	if (fd_c[0] == '1' && fd_c[1] == '\0')
 		fd = 1;
 	else

@@ -6,11 +6,11 @@
 /*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 02:09:13 by ilyes             #+#    #+#             */
-/*   Updated: 2022/04/20 23:29:59 by ilyes            ###   ########.fr       */
+/*   Updated: 2022/05/01 22:57:49 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 #include "test_il.h"
 
 t_func	param_tester(char *function)
@@ -27,10 +27,18 @@ t_func	one_param(char *function)
 		return (ATOI);
 	else if (strcmp(function, "itoa") == 0)
 		return (ITOA);
+	else if (strcmp(function, "strdup") == 0)
+		return (STRDUP);
 	else if (strcmp(function, "strmapi") == 0)
 		return (STRMAPI);
 	else if (strcmp(function, "striteri") == 0)
 		return (STRITERI);
+	else if (strcmp(function, "strlen") == 0)
+		return (STRLEN);
+	else if (strcmp(function, "tolower") == 0)
+		return (TOLOWER);
+	else if (strcmp(function, "toupper") == 0)
+		return (TOUPPER);
 	else
 		return (INVALID);
 }
@@ -65,6 +73,10 @@ t_func	three_params(char *function)
 		return (MEMCHR);
 	else if (strcmp(function, "memcmp") == 0)
 		return (MEMCMP);
+	else if (strcmp(function, "memmove") == 0)
+		return (MEMMOVE);
+	else if (strcmp(function, "strncmp") == 0)
+		return (STRNCMP);
 	else if (strcmp(function, "strlcpy") == 0)
 		return (STRLCPY);
 	else if (strcmp(function, "strlcat") == 0)
