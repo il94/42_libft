@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_ressources.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 16:45:37 by ilyes             #+#    #+#             */
-/*   Updated: 2022/05/01 21:08:40 by ilyes            ###   ########.fr       */
+/*   Created: 2022/04/21 02:57:18 by ilyes             #+#    #+#             */
+/*   Updated: 2022/05/02 17:13:55 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
-#include "test_il.h"
+#include "libft.h"
 
-char	add_i(unsigned int value, char c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	return (c + value);
-}
+	t_list	*temp;
 
-void	deduct_i(unsigned int value, char *c)
-{
-	*c += value;
+	if (lst != NULL)
+	{
+		temp = lst;
+		while (temp->next)
+			temp = temp->next;
+		return (temp);
+	}
+	else
+		return (lst);
 }
