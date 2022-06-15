@@ -1,0 +1,1 @@
+/!\ strtrim KO /!\
