@@ -6,11 +6,10 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 14:09:28 by ilyes             #+#    #+#             */
-/*   Updated: 2022/05/03 09:24:19 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:21:28 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_il.h"
 
 int	char_to_whitespace(char c)

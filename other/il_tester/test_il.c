@@ -6,11 +6,10 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:41:52 by ilyes             #+#    #+#             */
-/*   Updated: 2022/05/03 09:24:22 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:21:30 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_il.h"
 
 int	main(int ac, char **av)

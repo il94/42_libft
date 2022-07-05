@@ -6,11 +6,10 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 02:16:26 by ilyes             #+#    #+#             */
-/*   Updated: 2022/05/03 09:24:14 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:21:24 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_il.h"
 
 void	run_strchr_test(char *s, char *c_c)

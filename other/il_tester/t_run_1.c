@@ -6,11 +6,10 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 02:14:46 by ilyes             #+#    #+#             */
-/*   Updated: 2022/05/03 09:24:11 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:26:48 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_il.h"
 
 void	run_atoi_test(char *nptr_c)

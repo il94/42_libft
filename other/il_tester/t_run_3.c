@@ -6,11 +6,10 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 02:09:25 by ilyes             #+#    #+#             */
-/*   Updated: 2022/05/03 09:24:17 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:21:25 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "test_il.h"
 
 void	run_memchr_test(char *s, char *c_c, char *n_c)
