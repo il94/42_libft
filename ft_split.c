@@ -6,13 +6,13 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:44:13 by ilandols          #+#    #+#             */
-/*   Updated: 2022/07/05 17:40:56 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:02:57 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	il_free_array(char **elements)
+static void	ft_free_array(char **elements)
 {
 	int	i;
 
@@ -66,7 +66,7 @@ static int	count_words(char const *s, char c)
 	int	result;
 	int	i;
 
-	if (!s[0])
+	if (!s || !s[0])
 		return (0);
 	if (!c)
 		return (1);
@@ -103,7 +103,7 @@ char	**ft_split(char const *s, char c)
 		array[i] = get_word(s, c, &j, size_word);
 		if (!array[i])
 		{
-			il_free_array(array);
+			ft_free_array(array);
 			return (NULL);
 		}
 		i++;
