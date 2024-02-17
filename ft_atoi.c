@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
+/*   By: ilandols <ilandols@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:44:08 by ilandols          #+#    #+#             */
-/*   Updated: 2022/10/29 14:49:51 by ilandols         ###   ########.fr       */
+/*   Updated: 2024/02/17 17:55:26 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	il_iswhitespace(int c)
-{
-	return ((c >= '\t' && c <= '\r') || c == ' ');
-}
 
 int	ft_atoi(const char *nptr)
 {
@@ -26,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	symb = 1;
 	result = 0;
-	while (il_iswhitespace(nptr[i]))
+	while ((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
 		i++;
 	if (nptr[i] == '-')
 	{
